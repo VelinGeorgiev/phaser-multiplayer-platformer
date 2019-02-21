@@ -17,7 +17,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: 'public\**'
+    contents: '**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
