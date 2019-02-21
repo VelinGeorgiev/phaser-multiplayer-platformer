@@ -15,8 +15,13 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
+- task: CopyFiles@2
+  inputs:
+    contents: 'public\**'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)' 
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
     artifactName: 'Publish Node API' 
   displayName: 'Publish Node API public'
