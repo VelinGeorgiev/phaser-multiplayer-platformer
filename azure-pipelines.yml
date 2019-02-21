@@ -20,6 +20,21 @@ steps:
     contents: 'package.json'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
+- task: CopyFiles@2
+  inputs:
+    contents: 'config.json'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: CopyFiles@2
+  inputs:
+    contents: 'server.js'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**\public\**'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: $(Build.ArtifactStagingDirectory)
