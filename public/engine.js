@@ -194,7 +194,7 @@ function create() {
         fill: "#ffffff",
     });
 
-    leaderScore = this.add.text(16, 570, 'Leader: 0', {
+    leaderScore = this.add.text(16, 570, 'devConfLK: 0', {
         fontSize: '20px',
         fill: '#000',
         fill: "#ffffff",
